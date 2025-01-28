@@ -5,6 +5,23 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    
+    int navios;
+    char * locnavio [4] [4]={
+        {"1", "0", "0","0"},
+        {"1", "0", "0","0"},
+        {"0", "0", "0","0"},
+        {"0", "0", "2","2"}
+
+    };
+    printf("navio 1: %s %s \n", locnavio[0][0],locnavio[1][0]);
+    printf("navio 2: %s %s \n", locnavio[3][2],locnavio[3][3]);
+
+    printf("**localizaçao dos navios**\n");
+    printf("%s %s %s %s \n", locnavio[0][0],locnavio[0][1],locnavio[0][2],locnavio[0][3]);
+    printf("%s %s %s %s \n", locnavio[1][0],locnavio[1][1],locnavio[1][2],locnavio[1][3]);
+    printf("%s %s %s %s \n", locnavio[2][0],locnavio[2][1],locnavio[2][2],locnavio[2][3]);
+    printf("%s %s %s %s \n", locnavio[3][0],locnavio[3][1],locnavio[3][2],locnavio[3][3]);
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
