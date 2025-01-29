@@ -1,27 +1,35 @@
 #include <stdio.h>
 
+#define LINHAS 10
+#define COLUNAS 10
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
     
-    int navios;
-    char * locnavio [4] [4]={
-        {"1", "0", "0","0"},
-        {"1", "0", "0","0"},
-        {"0", "0", "0","0"},
-        {"0", "0", "2","2"}
+   
+    int matriz [LINHAS] [COLUNAS];
+    int navios=0;
 
+    printf("Digite os valores da matriz 10x10:\n");
+    for (int i = 0; i < LINHAS; i++){
+        for (int j = 0; j < COLUNAS; j++)
+        {   printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        };
+        
     };
-    printf("navio 1: %s %s \n", locnavio[0][0],locnavio[1][0]);
-    printf("navio 2: %s %s \n", locnavio[3][2],locnavio[3][3]);
-
-    printf("**localizaçao dos navios**\n");
-    printf("%s %s %s %s \n", locnavio[0][0],locnavio[0][1],locnavio[0][2],locnavio[0][3]);
-    printf("%s %s %s %s \n", locnavio[1][0],locnavio[1][1],locnavio[1][2],locnavio[1][3]);
-    printf("%s %s %s %s \n", locnavio[2][0],locnavio[2][1],locnavio[2][2],locnavio[2][3]);
-    printf("%s %s %s %s \n", locnavio[3][0],locnavio[3][1],locnavio[3][2],locnavio[3][3]);
+    printf("matriz com a localizacao dos navios: \n");
+    for (int i = 0; i < LINHAS; i++)
+    {
+        for (int j = 0; j < COLUNAS; j++)
+        {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    };
+    
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
